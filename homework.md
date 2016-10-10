@@ -41,7 +41,7 @@ Using the SQL Database file given to you as the source of data to answer the que
 
   6. Deletes the user with the name 'Valerie Gibson'.
   DELETE FROM users WHERE name = 'Valerie Gibson';
-  
+
   7. Deletes the shows for the user you just deleted.
   DELETE FROM shows_users WHERE user_id = 25 AND show_idea = 12;
 
@@ -52,21 +52,27 @@ Using the SQL Database file given to you as the source of data to answer the que
   9. Select the names and prices of all shows, ordered by price in ascending order.
 
   10. Select the average price of all shows.
+  SELECT AVG (price) FROM shows 
 
   11. Select the price of the least expensive show.
+  SELECT MIN(price) FROM shows
 
   12. Select the sum of the price of all shows.
+  SELECT SUM(price) FROM shows
 
   13. Select the sum of the price of all shows whose prices is less than £20.
 
   14. Select the name and price of the most expensive show.
+  SELECT MAX(price) FROM shows
 
   15. Select the name and price of the second from cheapest show.
 
+
   16. Select the names of all users whose names start with the letter "N".
 
-  17. Select the names of users whose names contain "er".
 
+  17. Select the names of users whose names contain "er".
+  
 
 ## Section 3
 
