@@ -151,7 +151,8 @@ INSERT INTO "shows_users" (show_id, user_id) VALUES (11, 21);
 
 
 
- SELECT SUM(price) FROM shows AND name FROM shows
+ SELECT * FROM shows
+ ORDER BY price;
 
 
 

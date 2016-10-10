@@ -61,6 +61,7 @@ Using the SQL Database file given to you as the source of data to answer the que
   SELECT SUM(price) FROM shows
 
   13. Select the sum of the price of all shows whose prices is less than £20.
+  SELECT SUM(price) FROM shows WHERE price < 20
 
   14. Select the name and price of the most expensive show.
   SELECT MAX(price) FROM shows
