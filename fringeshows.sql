@@ -150,6 +150,7 @@ INSERT INTO "shows_users" (show_id, user_id) VALUES (12, 20);
 INSERT INTO "shows_users" (show_id, user_id) VALUES (11, 21);
 
 
+SELECT MIN(price) FROM shows
 
 
 
