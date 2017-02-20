@@ -216,6 +216,7 @@ SELECT MIN(price) FROM shows;
 SELECT SUM(price) FROM shows;
 
 -- 5.
+SELECT SUM(price) FROM shows WHERE price < 20.00;
 
 -- 6.
 
