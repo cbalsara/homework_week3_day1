@@ -203,9 +203,11 @@ INSERT INTO "shows_users" (show_id, user_id) VALUES (11, 21);
 
 -- Section 2
 -- 1.
-SELECT name, price FROM shows;
+SELECT name, price FROM shows ORDER BY price ASC;
 
 -- 2.
+
+SELECT AVG(price) FROM shows AVG;
 
 -- 3.
 
