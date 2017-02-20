@@ -230,7 +230,10 @@ SELECT name FROM users WHERE name LIKE 'C%';
 SELECT name FROM users WHERE name LIKE '%er%';
 
 -- Section 3
+-- select time for edinb royal tatoo
 -- 1.
+SELECT time FROM times INNER JOIN shows ON shows.id = times.show_id WHERE shows.id = 12;
+
 
 -- 2.
 
