@@ -227,6 +227,7 @@ SELECT SUM(price) FROM shows WHERE price < 20.00;
 SELECT name FROM users WHERE name LIKE 'C%';
 
 -- 9.
+SELECT name FROM users WHERE name LIKE '%er%';
 
 -- Section 3
 -- 1.
