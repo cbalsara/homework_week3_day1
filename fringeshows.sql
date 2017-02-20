@@ -213,6 +213,7 @@ SELECT AVG(price) FROM shows;
 SELECT MIN(price) FROM shows;
 
 -- 4.
+SELECT SUM(price) FROM shows;
 
 -- 5.
 
