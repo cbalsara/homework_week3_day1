@@ -207,9 +207,10 @@ SELECT name, price FROM shows ORDER BY price ASC;
 
 -- 2.
 
-SELECT AVG(price) FROM shows AVG;
+SELECT AVG(price) FROM shows;
 
 -- 3.
+SELECT MIN(price) FROM shows;
 
 -- 4.
 
