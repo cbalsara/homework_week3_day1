@@ -43,44 +43,47 @@ Using the SQL Database file given to you as the source of data to answer the que
   DELETE FROM users WHERE name = 'Valerie Gibson';
 
   7. Deletes the shows for the user you just deleted.
-  DELETE FROM shows_users WHERE user_id = 25 AND show_idea = 12;
+  DELETE FROM shows_users WHERE user_id = 25 AND show_id = 12;
 
 ## Section 2
 
   This section involves more complex queries.  You will need to go and find out about aggregate funcions in SQL to answer some of the next questions.
 
-  9. Select the names and prices of all shows, ordered by price in ascending order.
+  9. Select the names and prices of all shows, ordered by price in ascending order.  
+  SELECT name, price FROM shows
+  ORDER BY price ASC;
 
   10. Select the average price of all shows.
-  SELECT AVG (price) FROM shows 
+  SELECT AVG (price) FROM shows; 
 
   11. Select the price of the least expensive show.
-  SELECT MIN(price) FROM shows
+  SELECT MIN(price) FROM shows;
 
   12. Select the sum of the price of all shows.
-  SELECT SUM(price) FROM shows
+  SELECT SUM(price) FROM shows;
 
   13. Select the sum of the price of all shows whose prices is less than £20.
   SELECT SUM(price) FROM shows WHERE price < 20
 
   14. Select the name and price of the most expensive show.
-  SELECT MAX(price) FROM shows
+  SELECT name, price FROM shows ORDER BY price DESC LIMIT 1; 
+
 
   15. Select the name and price of the second from cheapest show.
+    SELECT name, price FROM shows ORDER BY price ASC LIMIT 1 OFFSET 1;
 
-
-  16. Select the names of all users whose names start with the letter "N".
-
+  16. Select the names of all users whose names start with the letter "C". 
+  SELECT name FROM users WHERE name LIKE 'C%' ORDER BY name; 
 
   17. Select the names of users whose names contain "er".
-  
+  SELECT name FROM users WHERE name LIKE '%er%'; 
 
 ## Section 3
 
   The following questions can be answered by using nested SQL statements but ideally you should learn about JOIN clauses to answer them.
 
   18. Select the time for the Edinburgh Royal Tattoo.
-
+  
   19. Select the number of users who want to see "Shitfaced Shakespeare".
 
   20. Select all of the user names and the count of shows they're going to see.
