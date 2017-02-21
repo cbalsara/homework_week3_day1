@@ -242,8 +242,13 @@ SELECT COUNT(shows_users.user_id) FROM shows_users INNER JOIN users ON users.id 
 -- Select all the users and the count of shows they are going to see
 SELECT name, COUNT(name) FROM users INNER JOIN shows_users ON shows_users.user_id = users.id GROUP BY name ORDER BY count DESC; 
 
-
 -- 4.
+-- Select all users going to a show at 17:15
+-- users -> shows_users -> shows -> times
+SELECT users.name FROM users INNER JOIN shows_users ON users.id = shows_users.user_id INNER JOIN shows ON shows_users.show_id = shows.id INNER JOIN times ON shows.id = times.show_id WHERE times.time = '17:15';
+
+
+
 
 
 
