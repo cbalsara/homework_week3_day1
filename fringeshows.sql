@@ -235,10 +235,13 @@ SELECT name FROM users WHERE name LIKE '%er%';
 SELECT time FROM times INNER JOIN shows ON shows.id = times.show_id WHERE shows.id = 12;
 
 -- 2.
--- select no of user who want to see shitfaced shakespear
+-- select no of user who want to see shitfaced shakespeare
 SELECT COUNT(shows_users.user_id) FROM shows_users INNER JOIN users ON users.id = shows_users.user_id WHERE shows_users.show_id = 2; 
 
 -- 3.
+-- Select all the users and the count of shows they are going to see
+SELECT name, COUNT(name) FROM users INNER JOIN shows_users ON shows_users.user_id = users.id GROUP BY name ORDER BY count DESC; 
+
 
 -- 4.
 
